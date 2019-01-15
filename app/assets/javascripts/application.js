@@ -10,7 +10,18 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
+//= require bootstrap-sprockets
 //= require rails-ujs
-//= require activestorage
 //= require turbolinks
+//= require custom.coffee
+//= require javascripts/megamenu.js
+//= require javascripts/owl.carousel.min.js
+//= require javascripts/jquery.bxslider.js
+//= require javascripts/revolution-slider.js
+//= require javascripts/mobile-menu.js
+//= require javascripts/jquery-ui.js
+//= require javascripts/main.js
+//= require javascripts/countdown.js
+//= require activestorage
 //= require_tree .
