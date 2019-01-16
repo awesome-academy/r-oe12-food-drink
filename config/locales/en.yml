@@ -6,7 +6,9 @@ en:
       wellcome_msg: "Welcome to Foods and Drinks!"
       call_us: "Call Us: +123.456.789"
       my_account: "My Account"
-      sign_in: "Sign In"
+      sign_in: "Sign in"
+      sign_up: "Sign up"
+      log_out: "Log out"
       logo: "Logo"
       recently_added_item: "Recently added item(s)"
       cart: "Cart"
@@ -27,6 +29,11 @@ en:
       hot_trend: "Hot trend"
     footer:
       design_by: "Design by DT"
-    static_pages:
-      home:
-        home_title: "Home"
+  static_pages:
+    home:
+      home_title: "Home"
+  users:
+    show:
+      my_profile: "My Profile"
+      update: "Update"
+  
