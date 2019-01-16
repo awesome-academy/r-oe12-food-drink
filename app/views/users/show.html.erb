@@ -1,0 +1,25 @@
+<% provide(:title, @user.username) %>
+<section class="main-container col1-layout">
+  <div class="main container">
+    <div class="page-content">
+      <div class="account-login">
+        <div class="box-authentication">
+        <div>
+          <h4 class="pinline"><%= t ".my_profile" %></h4>
+          <p class="pinline"><%= link_to t(".update"), edit_user_registration_path(current_user) %></p>
+        </div>
+          <%= form_for @user do |f| %>
+            <%= f.label :username %>
+            <%= f.text_field :username, class: "form-control", disabled: true%>
+            <%= f.label :email %>
+            <%= f.email_field :email, class: "form-control", disabled: true %>
+            <%= f.label :phone %>
+            <%= f.text_field :phone, class: "form-control", disabled: true %>
+            <%= f.label :address %>
+            <%= f.text_field :address, class: "form-control", disabled: true %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
