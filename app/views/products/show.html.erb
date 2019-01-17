@@ -1,0 +1,45 @@
+<% provide :title, @product.name %>
+<div class="main-container col1-layout">
+  <div class="container">
+    <div class="row">
+      <div class="col-main">
+        <div class="product-view-area">
+          <div class="product-big-image col-xs-12 col-sm-5 col-lg-5 col-md-5">
+            <div class="large-image">
+              <%= image_tag @product.picture, class: "first-img", alt: @product.name %>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-7 col-lg-7 col-md-7 product-details-area">
+              <div class="product-name">
+                <h1><%= @product.name %></h1>
+              </div>
+              <div class="price-box">
+                <p class="special-price">
+                  <span class="price"><%= t "products.product.price", price: @product.price %></span>
+                </p>
+              </div>
+              <div>
+                <button class="button pro-add-to-cart", type="button">
+                  <span><i class="fa fa-shopping-cart"></i><%= t("products.add_to_cart") %></span>
+                </button>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="product-overview-tab">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="product-tab-inner">
+                <ul id="product-detail-tab" class="nav nav-tabs product-tabs">
+                  <a href="#description" data-toggle="tab"><%= t ".description" %></a>
+                  <p><%= @product.describe %></p>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

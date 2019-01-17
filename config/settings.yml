@@ -1,0 +1,5 @@
+paginate:
+  per_page: 4
+category:
+  food: 1
+  drink: 2

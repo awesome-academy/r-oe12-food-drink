@@ -36,4 +36,15 @@ en:
     show:
       my_profile: "My Profile"
       update: "Update"
-  
+  static_pages:
+    category_area:
+      food_category: "Food"
+      drink_category: "Drink"
+      no_item: "No item"
+  products:
+    product:
+      price_label: "Price"
+      price: "$ %{price}"
+      add_to_cart: "Add to Cart"
+    show:
+      notfoud: "Not found"

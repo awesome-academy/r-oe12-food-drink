@@ -1,3 +1,3 @@
-class Categoty < ApplicationRecord
+class Category < ApplicationRecord
   has_many :products, dependent: :destroy
 end
