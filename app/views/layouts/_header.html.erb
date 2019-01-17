@@ -14,20 +14,26 @@
                     <%= link_to current_user do %>
                       <i class="fa fa-sign-in"></i>
                       <span class="hidden-xs"><%= t ".my_account" %></span>
-                    <% end  %>
+                    <% end %>
+                  </div>
+                  <div class="login">
+                   <%= link_to orders_path do %>
+                      <i class="fa fa-history"></i>
+                      <span class="hidden-xs" ><%= t ".history_order" %></span>
+                    <% end %>
                   </div>
                   <div class="login">
                     <%= link_to signout_path, method: :delete do %>
                       <i class="fa fa-sign-in"></i>
                       <span class="hidden-xs"><%= t ".log_out" %></span>
-                    <% end  %>
+                    <% end %>
                   </div>
               <% else %>
                 <div class="login">
                   <%= link_to signin_path do %>
                     <i class="fa fa-sign-in"></i>
                     <span class="hidden-xs"><%= t ".sign_in" %></span>
-                  <% end  %>
+                  <% end %>
                 </div>
                 <div class="signup">
                   <%= link_to signup_path do %>

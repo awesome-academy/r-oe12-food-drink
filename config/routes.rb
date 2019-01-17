@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root "static_pages#home"
   resources :products
+  resources :orders
+  resources :order_details, only: [:show]
   devise_for :users
   resources :users, :only => [:show]
   as :user do
