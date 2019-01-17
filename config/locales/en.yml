@@ -1,4 +1,5 @@
 en:
+  please_log_in: "Please login"
   layouts:
     application:
       base_title: "Foods And Drinks"
@@ -17,6 +18,7 @@ en:
       price: "$ %{price}"
       checkout: "Checkout"
       view_cart: "View Cart"
+      history_order: "History orders"
     mobile_menu:
       home: "Home"
       suggest: "Suggest"
@@ -48,3 +50,20 @@ en:
       add_to_cart: "Add to Cart"
     show:
       notfoud: "Not found"
+  orders:
+    not_found_order: "Not found order"
+    show:
+      detail_label: "Detail"
+    order:
+      total_price: "$ %{price}"
+    index:
+      no_label: "No."
+      ordered_date_label: "Ordered date"
+      detail_label: "Detail"
+  order_details:
+    order_detail:
+      price: "$ %{price}"
+    show:
+      image_label: "Image"
+      product_name_label: "Product Name"
+      unit_price_label: "Unit Price"
