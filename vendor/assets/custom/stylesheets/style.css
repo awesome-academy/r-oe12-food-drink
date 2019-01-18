@@ -6461,7 +6461,8 @@ p.note {
   margin-bottom: 0px
 }
 .page-order .cart_description {
-  font-size: 14px
+  font-size: 14px;
+  text-align: center;
 }
 .page-order .cart_navigation a.checkout-btn {
   float: right;

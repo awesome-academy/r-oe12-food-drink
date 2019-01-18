@@ -1,0 +1,21 @@
+<div class="order-detail-content">
+  <div class="table-responsive">
+    <table class="table table-bordered cart_summary">
+      <thead>
+        <tr>
+          <th class="cart_product"><%= t ".product" %></th>
+          <th class="action"><%= t ".name" %></th>
+          <th class="action"><%= t ".price" %></th>
+          <th class="action"><span class="glyphicon glyphicon-trash"></span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render partial: "order_cart", collection: @order_details, as: :order_detail %>
+      </tbody>
+    </table>
+  </div>
+  <div class="cart_navigation">
+    <%= link_to t(".back"), :back %>  
+    <a class="checkout-btn" href="#"><i class="fa fa-check"></i><%= t ".checkout" %></a>
+  </div>
+</div>

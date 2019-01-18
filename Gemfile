@@ -26,6 +26,7 @@ gem "rails-ujs", "~> 0.1.0"
 gem "turbolinks", "~> 5"
 gem "ckeditor"
 gem "devise", "~> 4.1"
+gem "font-awesome-sass", "~> 5.6.1"
 
 group :production do
   gem "pg", "~> 0.20.0"
