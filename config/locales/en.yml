@@ -67,3 +67,16 @@ en:
       image_label: "Image"
       product_name_label: "Product Name"
       unit_price_label: "Unit Price"
+  carts:
+    shopping_title: "Shopping cart"
+    shopping_cart:
+      product: "Product"
+      name: "Name"
+      price: "Price"
+      checkout: "Checkout"
+    order_cart:
+      you_sure: "You sure?"
+    create:
+      success_add: "Added success"
+    destroy:
+      success_delete: "Deleted sucess"

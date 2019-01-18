@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :products
   resources :orders
   resources :order_details, only: [:show]
+  resource :cart
   devise_for :users
   resources :users, :only => [:show]
   as :user do

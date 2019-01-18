@@ -20,7 +20,10 @@
               </div>
               <div>
                 <button class="button pro-add-to-cart", type="button">
-                  <span><i class="fa fa-shopping-cart"></i><%= t("products.add_to_cart") %></span>
+                  <%= link_to cart_path(product_id: @product.id), method: :post do %>
+                    <i class="fa fa-shopping-cart"></i>
+                    <span><%= t ".add_to_cart" %></span>
+                  <% end %>
                 </button>
               </div>
           </div>
