@@ -11,11 +11,11 @@ FactoryBot.define do
     end
 
     trait :admin do
-      admin {true}
+      is_admin {true}
     end
 
     trait :user do
-      admin {false}
+      is_admin {false}
     end
   end
 end

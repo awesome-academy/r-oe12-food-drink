@@ -3,3 +3,5 @@ paginate:
 category:
   food: 1
   drink: 2
+  name:
+    maxium: 50

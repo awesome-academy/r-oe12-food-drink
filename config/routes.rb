@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   end
   namespace :admin do
     root "static_pages#index"
+    resources :categories
   end
 end

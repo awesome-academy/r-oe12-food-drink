@@ -8,6 +8,10 @@ class ApplicationController < ActionController::Base
     session[:shopping_cart] ||= []
   end
 
+  def admin_user
+    redirect_to root_url unless current_user.is_admin?
+  end
+
   protected
  
   def configure_permitted_parameters
