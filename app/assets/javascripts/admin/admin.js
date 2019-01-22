@@ -4,3 +4,4 @@
 //= require turbolinks
 //= require_tree .
 //= require javascripts/sb-admin-2.js
+//= require alert.js

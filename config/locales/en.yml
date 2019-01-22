@@ -1,4 +1,10 @@
 en:
+  flash:
+    create_success: "Add success"
+    create_fail: "Add failed"
+    delete_success: "Delete success"
+    update_fail: "Update Fail"
+    update_success: "Update Success"
   please_log_in: "Please login"
   layouts:
     application:
@@ -19,6 +25,7 @@ en:
       checkout: "Checkout"
       view_cart: "View Cart"
       history_order: "History orders"
+      dashboard_admin: "Dashboard Admin"
     mobile_menu:
       home: "Home"
       suggest: "Suggest"
@@ -99,3 +106,32 @@ en:
       index:
         dashboard_admin_title: "Dashboard Admin"
         goto: "Go to"
+    categories:
+      category:
+        you_sure: "Are you sure?"
+      not_found: "Not found category"
+      can_not_delete: "Can not delete category, because the product exists"
+      index:
+        index: "Index"
+        name: "Name"
+        quatity: "Quatity"
+        function: "Function"
+        manage_categories: "Manage categories"
+        list_category: "List category"
+        add_new: "Add new"
+      destroy:
+        success: "Delete success"
+        failed: "Delete failed"
+      edit:
+        update_category: "Update Category"
+      update:
+        success: "Update Success"
+        failed: "Update Fail"
+      new:
+        new_category: "New Category"
+      create:
+        success: "Add success"
+        failed: "Add failed"
+      category_form:
+        placeholder: "Input category name"
+        button_submit: "Save"
