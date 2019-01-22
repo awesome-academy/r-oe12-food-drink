@@ -31,6 +31,8 @@ en:
       hot_trend: "Hot trend"
     footer:
       design_by: "Design by DT"
+    application_admin:
+      base_title: "Foods And Drinks"
   static_pages:
     home:
       home_title: "Home"
@@ -80,3 +82,20 @@ en:
       success_add: "Added success"
     destroy:
       success_delete: "Deleted sucess"
+  admin:
+    layouts:
+      dashboard: "Dashboard"
+      manage_users: "Manage Users"
+      manage_categories: "Manage Categories"
+      manage_products: "Manage Products"
+      manage_orders: "Manage Orders"
+      manage_suggests: "Manage Suggests"
+      navbar:
+        admin_header: "Admin Page"
+        back_to_public_page: "Back to public page"
+        logout: "Logout"
+        import_products: "Import Products"
+    static_pages:
+      index:
+        dashboard_admin_title: "Dashboard Admin"
+        goto: "Go to"

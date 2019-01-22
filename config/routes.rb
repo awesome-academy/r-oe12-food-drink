@@ -12,4 +12,7 @@ Rails.application.routes.draw do
     delete "signout" => "devise/sessions#destroy"
     get "signup" => "devise/registrations#new"
   end
+  namespace :admin do
+    root "static_pages#index"
+  end
 end
