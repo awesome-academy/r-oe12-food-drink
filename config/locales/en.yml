@@ -123,7 +123,7 @@ en:
       index:
         index: "Index"
         name: "Name"
-        quatity: "Quatity"
+        quantity: "Quantity"
         function: "Function"
         manage_categories: "Manage categories"
         list_category: "List category"
@@ -143,4 +143,40 @@ en:
         failed: "Add failed"
       category_form:
         placeholder: "Input category name"
+        button_submit: "Save"
+    products:
+      not_found_product: "Not found product"
+      can_not_delete: "Can not delete category, because the order exists"
+      product:
+        you_sure: "Are you sure?"
+      index:
+        id: "id"
+        picture: "Picture"
+        name: "Name"
+        quantity: "Quantity"
+        price: "Price"
+        category_id: "Category"
+        function: "Function"
+        manage_products: "Manage Products"
+        list_product: "List product"
+        add_new: "Add new"
+      destroy:
+        success: "Delete success"
+        failed: "Delete failed"
+      edit:
+        update_product: "Update Products"
+      update:
+        success: "Update Success"
+        failed: "Update Fail"
+      new:
+        new_product: "New Product"
+      create:
+        success: "Add success"
+        failed: "Add failed"
+      product_form:
+        name_placeholder: "Input product name"
+        detail_placeholder: "Input product detail"
+        price_placeholder: "Input product price"
+        quality_placeholder: "Input product quality"
+        category: "Category"
         button_submit: "Save"

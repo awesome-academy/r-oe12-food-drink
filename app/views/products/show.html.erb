@@ -6,7 +6,7 @@
         <div class="product-view-area">
           <div class="product-big-image col-xs-12 col-sm-5 col-lg-5 col-md-5">
             <div class="large-image">
-              <%= image_tag @product.picture, class: "first-img", alt: @product.name %>
+              <%= image_tag @product.picture.url, class: "first-img", alt: @product.name %>
             </div>
           </div>
           <div class="col-xs-12 col-sm-7 col-lg-7 col-md-7 product-details-area">
