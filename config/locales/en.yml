@@ -5,6 +5,7 @@ en:
     delete_success: "Delete success"
     update_fail: "Update Fail"
     update_success: "Update Success"
+    suggested_fail: "Suggested fail"
   please_log_in: "Please login"
   layouts:
     application:
@@ -180,3 +181,23 @@ en:
         quality_placeholder: "Input product quality"
         category: "Category"
         button_submit: "Save"
+    suggests:
+      can_not_delete: "Can not delete suggest"
+      not_found_category: "Not found suggest"
+      index:
+        index: "Index"
+        username: "Customer name"
+        name: "Name"
+        describe: "Describe"
+        status: "Status"
+        price: "Price"
+        function: "Function"
+        manage_suggests: "Manage suggests"
+        list_suggest: "List suggest"
+      destroy:
+        delete_success: "Delete success"
+        delete_failed: "Delete failed"
+        confirm: "Are you sure?"
+      update:
+        success: "Change success"
+        failed: "Update Fail"

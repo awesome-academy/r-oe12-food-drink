@@ -1,0 +1,27 @@
+<% @suggests.each_with_index do |suggest, index| %>
+  <tr>
+    <td><%= create_index params[:page], index, Settings.suggests.paginate.per_page %></td>
+    <td><%= suggest.user_username %></td>
+    <td><%= suggest.name %></td>
+    <td><%= suggest.describe %></td>
+    <td><%= suggest.price %></td>
+    <td><%= suggest.status %></td>
+    <td>
+      <% if suggest.pending? %>
+        <%= link_to admin_suggest_path(id: suggest.id, status: Settings.suggests.accept_status),
+          method: :patch do %>
+          <i class="fa fa-check"></i>
+        <% end %>
+        |
+        <%= link_to admin_suggest_path(id: suggest.id, status: Settings.suggests.refuse_status),
+          method: :patch do %>
+          <i class="fa fa-times"></i>
+        <% end %>
+      <% end %>
+      <%= link_to admin_suggest_path(suggest), method: :delete,
+        data: {confirm: t("admin.suggests.destroy.confirm")} do %>
+        <i class="glyphicon glyphicon-trash"></i>
+      <% end %>
+    </td>
+  </tr>
+<% end %>
