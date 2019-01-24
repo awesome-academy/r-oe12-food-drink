@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root "static_pages#home"
+  resources :suggests
   resources :products
   resources :orders
   resources :order_details, only: [:show]

@@ -4,8 +4,8 @@ class CreateSuggests < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :describe
       t.float :price
-      t.string :image
-      t.boolean :status
+      t.string :picture
+      t.integer :status, default: 0
       t.references :user, foreign_key: true
 
       t.timestamps

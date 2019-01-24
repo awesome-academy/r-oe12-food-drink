@@ -89,6 +89,15 @@ en:
       success_add: "Added success"
     destroy:
       success_delete: "Deleted sucess"
+  suggests:
+    new:
+      suggest: "Suggests"
+      suggest_us: "Suggests for Us"
+      write_suggest: "Write a suggest"
+      send_suggest: "Send Suggest"
+    create:
+      suggest_success: "Suggested success"
+      suggest_fail: "Suggested fail"
   admin:
     layouts:
       dashboard: "Dashboard"

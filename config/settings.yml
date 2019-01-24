@@ -5,3 +5,6 @@ category:
   drink: 2
   name:
     maxium: 50
+suggest:
+  name:
+    minimum: 8
