@@ -1,0 +1,37 @@
+<% provide :title, t(".manage_suggests") %>
+<div id="page-wrapper" class="page-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header"><%= t ".manage_suggests" %></h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <%= t ".list_suggest" %>
+        </div>
+        <div class="panel-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th><%= t ".index" %></th>
+                  <th><%= t ".username" %></th>
+                  <th><%= t ".name" %></th>
+                  <th><%= t ".describe" %></th>
+                  <th><%= t ".price" %></th>
+                  <th><%= t ".status" %></th>
+                  <th><%= t ".function" %></th>
+                </tr>
+              </thead>
+              <tbody id="list-suggest">
+                <%= render partial: "suggest" %>
+              </tbody>
+            </table>
+        </div>
+      </div>
+      <%= paginate @suggests %>
+    </div>
+  </div>
+</div>

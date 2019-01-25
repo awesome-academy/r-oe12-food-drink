@@ -8,6 +8,9 @@ category:
 suggest:
   name:
     minimum: 8
+  price:
+    minimum: 10000
+    maximum: 100000
 admin:
   products:
     picture_width: 650
@@ -19,3 +22,12 @@ product:
   maximum: 100000
   paginate:
     per_page: 5
+  price:
+    minimum: 10000
+    maximum: 100000
+suggests:
+  pending: 0
+  accept_status: 1
+  refuse_status: 2
+  paginate:
+    per_page: 7

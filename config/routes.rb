@@ -17,5 +17,6 @@ Rails.application.routes.draw do
     root "static_pages#index"
     resources :categories
     resources :products
+    resources :suggests, only: %i(index destroy update)
   end
 end

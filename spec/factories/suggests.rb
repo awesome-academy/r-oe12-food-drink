@@ -2,9 +2,14 @@ FactoryBot.define do
   factory :suggest do
     name { "MyString" }
     describe { "MyString" }
-    price { 1.5 }
-    image { "MyString" }
-    status { false }
-    user { nil }
+    price { 10000 }
+    picture { "MyString" }
+    status { 0 }
+
+    after(:build) do |suggest|
+      user = FactoryBot.create :user
+
+      suggest.user_id = user.id
+    end
   end
 end
