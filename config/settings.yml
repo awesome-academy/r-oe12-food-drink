@@ -31,3 +31,6 @@ suggests:
   refuse_status: 2
   paginate:
     per_page: 7
+orders:
+  accept_status: 1
+  refuse_status: 2

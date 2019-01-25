@@ -61,15 +61,24 @@ en:
     show:
       notfoud: "Not found"
   orders:
+    create:
+      order_success: "Order Success"
+      order_failed: "Order Failed"
+    destroy:
+      delete_success: "Delete Success"
+      delete_failed: "Delete Failed"
     not_found_order: "Not found order"
     show:
       detail_label: "Detail"
     order:
       total_price: "$ %{price}"
     index:
+      history_orders: "History orders"
       no_label: "No."
       ordered_date_label: "Ordered date"
-      detail_label: "Detail"
+      status: "Status"
+      function: "Function"
+
   order_details:
     order_detail:
       price: "$ %{price}"
@@ -77,6 +86,16 @@ en:
       image_label: "Image"
       product_name_label: "Product Name"
       unit_price_label: "Unit Price"
+    index:
+      manage_order_details: "Manager Order detail"
+      list_order_detail: "List order detail"
+    list_order_detail:
+      no_order: "No."
+      picture: "Picture"
+      name: "Product Name"
+      unit_price: "Unit price"
+      quantity: "Quanity"
+      total: "Total"
   carts:
     shopping_title: "Shopping cart"
     shopping_cart:
@@ -84,7 +103,11 @@ en:
       name: "Name"
       price: "Price"
       checkout: "Checkout"
+      quantity: "Quantity"
+      total_label: "Total"
+      function: "Function"
     order_cart:
+      apply: "Apply"
       you_sure: "You sure?"
     create:
       success_add: "Added success"
@@ -201,3 +224,13 @@ en:
       update:
         success: "Change success"
         failed: "Update Fail"
+    order_details:
+      index:
+        manage_order_details: "Manager Order detail"
+        list_order_detail: "List order detail"
+        no_order: "No."
+        picture: "Picture"
+        name: "Product Name"
+        unit_price: "Unit price"
+        quantity: "Quanity"
+        total: "Total"
