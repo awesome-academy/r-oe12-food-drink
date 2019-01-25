@@ -8,3 +8,14 @@ category:
 suggest:
   name:
     minimum: 8
+admin:
+  products:
+    picture_width: 650
+    picture_height: 650
+    name:
+      minimum: 8
+product:
+  minimum: 10000
+  maximum: 100000
+  paginate:
+    per_page: 5
