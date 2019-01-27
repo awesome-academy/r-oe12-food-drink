@@ -217,6 +217,7 @@ en:
         function: "Function"
         manage_suggests: "Manage suggests"
         list_suggest: "List suggest"
+        status_search: "0:pending, 1:accept, 2:refuse"
       destroy:
         delete_success: "Delete success"
         delete_failed: "Delete failed"
@@ -234,3 +235,30 @@ en:
         unit_price: "Unit price"
         quantity: "Quanity"
         total: "Total"
+    orders:
+      index:
+        manage_orders: "Manage orders"
+        list_order: "List order"
+        index: "Index"
+        user_email: "Customer email"
+        user_name: "Customer"
+        total: "Total"
+        status: "Status"
+        function: "Function"
+    users:
+      not_found_user: "Not found user"
+      index:
+        manage_users: "Manage users"
+        list_user: "List user"
+        index: "Index"
+        name: "Name"
+        gender: "Gender"
+        address: "Address"
+        phone: "Phone"
+        email: "Email"
+        actived: "Activated"
+        name_email: "name,email"
+        function: "Function"
+      destroy:
+        delete_success: "Delete success"
+        delete_failed: "Delete failed"

@@ -22,5 +22,6 @@ Rails.application.routes.draw do
     resources :orders, only: %i(index update) do
       resources :order_details, only: :index
     end
+    resources :users, only: %i(index destroy)
   end
 end
