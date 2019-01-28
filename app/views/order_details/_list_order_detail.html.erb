@@ -1,0 +1,26 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <%= t ".list_order_detail" %>
+  </div>
+  <div class="panel-body">
+    <div class="wishlist-item table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th><%= t ".no_order" %></th>
+            <th class="th-product"><%= t ".picture" %></th>
+            <th><%= t ".name" %></th>
+            <th><%= t ".unit_price" %></th>
+            <th><%= t ".quantity" %></th>
+            <th><%= t ".total" %></th>
+          </tr>
+        </thead>
+        <tbody id="list-order-detail">
+          <%= render partial: "order_detail" %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<%= link_to t(".back"), :back %>
+<%= paginate @order_details %>

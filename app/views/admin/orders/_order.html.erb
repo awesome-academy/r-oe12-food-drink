@@ -1,0 +1,26 @@
+<% @orders.each_with_index do |order, index| %>
+  <tr>
+    <td><%= create_index params[:page], index, Settings.paginate.per_page %></td>
+    <td><%= order.user_email %></td>
+    <td><%= order.user_username %></td>
+    <td><%= order.total %></td>
+    <td><%= order.status %></td>
+    <td>
+      <%= link_to admin_order_order_details_path(order_id: order.id), title: t(".detail") do %>
+        <i class="fa fa-info"></i>
+      <% end %>
+      <% if order.pending? %>
+        |
+        <%= link_to admin_order_path(id: order.id, status: Settings.orders.accept_status),
+          method: :patch, title: t(".accept") do %>
+          <i class="fa fa-check"></i>
+        <% end %>
+        |
+        <%= link_to admin_order_path(id: order.id, status: Settings.orders.refuse_status),
+          method: :patch, title: t(".refuse") do %>
+          <i class="fa fa-ban"></i>
+        <% end %>
+      <% end %>
+    </td>
+  </tr>
+<% end %>

@@ -17,4 +17,4 @@ Product.create!(name: "banh ngot", describe: "banh nay ngon", quantity: 100, pri
 end
 
 Order.create!(user_id: 1)
-OrderDetail.create!(order_id: 1, product_id: 1)
+OrderDetail.create!(order_id: 1, product_id: 1, quantity: 3)

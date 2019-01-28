@@ -12,12 +12,13 @@
                 <tr>
                   <th class="th-details"><%= t ".no_label" %></th>
                   <th class="th-price"><%= t ".ordered_date_label" %></th>
-                  <th class="th-total th-add-to-cart"><%= t ".detail_label" %> </th>
+                  <th class="th-price"><%= t ".status" %></th>
+                  <th class="th-total th-add-to-cart"><%= t ".function" %> </th>
                 </tr>
               </thead>
               <tbody id="list-order">
                 <% if @orders %>
-                  <%= render @orders %>
+                  <%= render partial: "order" %>
                 <% else %>
                   <tr><td colspan="4"><h5><%= t ".no_order" %></h5></td></tr>
                 <% end %>

@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   root "static_pages#home"
   resources :suggests
   resources :products
-  resources :orders
-  resources :order_details, only: [:show]
+  resources :orders do
+    resources :order_details
+  end
   resource :cart
   devise_for :users
   resources :users, :only => [:show]
@@ -18,5 +19,8 @@ Rails.application.routes.draw do
     resources :categories
     resources :products
     resources :suggests, only: %i(index destroy update)
+    resources :orders, only: %i(index update) do
+      resources :order_details, only: :index
+    end
   end
 end

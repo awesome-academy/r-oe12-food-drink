@@ -1,5 +1,19 @@
-<tr>
-  <td class="th-product"><%= order.id %></td>
-  <td class="th-details"><%= order.created_at %></td>
-  <th class="td-add-to-cart"><%= link_to t("orders.show.detail_label"), order_detail_path(order) %></th>
-</tr>
+<% @orders.each_with_index do |order, index| %>
+  <tr>
+    <td><%= create_index params[:page], index, Settings.suggests.paginate.per_page %></td>
+    <td class="th-details"><%= order.created_at %></td>
+    <td class="th-details"><%= order.status %></td>
+    <th>
+      <%= link_to order_order_details_path(order_id: order.id) do %>
+        <i class="fa fa-info"></i>
+      <% end %>
+      <% if order.pending?%>
+        |
+        <%= link_to order_path(order), method: :delete,
+          data: {confirm: t("admin.suggests.destroy.confirm")} do %>
+          <i class="glyphicon glyphicon-trash"></i>
+        <% end %>
+      <% end %>
+    </th>
+  </tr>
+<% end %>
