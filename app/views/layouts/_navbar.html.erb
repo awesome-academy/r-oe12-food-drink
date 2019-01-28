@@ -36,10 +36,10 @@
             </li>
             <li class="mt-root">
               <div class="mt-root-item">
-                <div class="title title_font"><span class="title-text"><%= t ".hot_trend" %></span></div>
+                <%= link_to search_path do %>
+                  <div class="title title_font"><span class="title-text"><%= t ".search" %></span></div>
+                <% end %>
               </div>
-              <ul class="menu-items col-xs-12">
-              </ul>
             </li>
           </ul>
         </div>

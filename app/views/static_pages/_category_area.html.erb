@@ -8,14 +8,14 @@
           </div>
           <div class="product-grid-area">
             <ul class="products-grid">
-              <% if @food_product %>
+              <% if @food_product.any? %>
                 <%= render @food_product %>
               <% else %>
                 <p><%= t ".no_item" %></p>
               <% end %>
             </ul>
           </div>
-          <% if @food_product %>
+          <% if @food_product.any? %>
             <%= paginate @food_product, class: "pagination-area",
               previous_label: "<", next_label: ">" %>
           <% else %>
@@ -37,14 +37,14 @@
           </div>
           <div class="product-grid-area">
             <ul class="products-grid">
-              <% if @drink_product %>
+              <% if @drink_product.any? %>
                 <%= render @drink_product %>
               <% else %>
                 <p><%= t ".no_item" %></p>
               <% end %>
             </ul>
           </div>
-          <% if @drink_product %>
+          <% if @drink_product.any? %>
             <%= paginate @drink_product, class: "pagination-area",
               previous_label: "<", next_label: ">" %>
           <% else %>

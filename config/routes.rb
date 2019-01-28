@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :order_details
   end
   resource :cart
+  get "/search", to: "filters#show"
   devise_for :users
   resources :users, :only => [:show]
   as :user do

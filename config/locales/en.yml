@@ -27,6 +27,7 @@ en:
       view_cart: "View Cart"
       history_order: "History orders"
       dashboard_admin: "Dashboard Admin"
+      search_place_holder: "Search name of product"
     mobile_menu:
       home: "Home"
       suggest: "Suggest"
@@ -36,7 +37,7 @@ en:
       shop_by_category: "Shop Foods And Drinks"
       home: "Home"
       suggest: "Suggest"
-      hot_trend: "Hot trend"
+      search: "Search"
     footer:
       design_by: "Design by DT"
     application_admin:
@@ -122,6 +123,18 @@ en:
     create:
       suggest_success: "Suggested success"
       suggest_fail: "Suggested fail"
+  filters:
+    search_title: "Search"
+    show:
+      products: "Products"
+      shop_by: "Shop By"
+      food: "Foods"
+      drink: "Drinks"
+      price: "Price"
+      min_price: "Min price"
+      max_price: "Max price"
+      search: "Search"
+      all_product: "All product"
   admin:
     layouts:
       dashboard: "Dashboard"
