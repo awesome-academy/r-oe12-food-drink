@@ -1,0 +1,17 @@
+<% @users.each_with_index do |user, index| %>
+  <tr>
+    <td><%= create_index params[:page], index, Settings.suggests.paginate.per_page %></td>
+    <td><%= user.username %></td>
+    <td><%= user.address %></td>
+    <td><%= user.phone %></td>
+    <td><%= user.email %></td>
+    <td>
+      <% if current_user.is_admin? && user.current_user?(current_user) %>
+        <%= link_to admin_user_path(user), method: :delete,
+          data: {confirm: t(".you_sure")} do %>
+          <i class="glyphicon glyphicon-trash"></i>
+        <% end %>
+      <% end %>
+    </td>
+  </tr>
+<% end %>

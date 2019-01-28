@@ -4,8 +4,14 @@ module Admin
     before_action :check_status, only: :destroy
 
     def index
-      @suggests = Suggest.order_by.page(params[:page]).
-        per Settings.suggests.paginate.per_page
+      @suggests =
+        if params[:search]
+          Suggest.search(params[:search]).order_by.page(params[:page]).
+          per Settings.suggests.paginate.per_page
+        else
+          Suggest.order_by.page(params[:page]).
+          per Settings.suggests.paginate.per_page
+        end
     end
 
     def destroy
