@@ -7,7 +7,8 @@ class Suggest < ApplicationRecord
   validates :price, presence: true
   validates_numericality_of :price, greater_than_or_equal_to: Settings.suggest.price.minimum,
     less_than_or_equal_to: Settings.suggest.price.maximum
-  scope :order_by, -> {order created_at: :desc}
-  scope :search, ->(key){where("status LIKE ?", "%#{key}%")}
+
+  scope :order_created_at_desc, -> {order created_at: :desc}
+
   delegate :username, to: :user, prefix: :user
 end

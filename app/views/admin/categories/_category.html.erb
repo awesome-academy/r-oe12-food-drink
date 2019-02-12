@@ -1,6 +1,7 @@
 <% @categories.each_with_index do |category, index| %>
   <tr>
-    <td><%= index %></td>
+    <td><%= create_index params[:page], index,
+      Settings.product.paginate.per_page %></td>
     <td><%= category.name %></td>
     <td><%= category.products.size %></td>
     <td>

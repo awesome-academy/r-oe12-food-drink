@@ -4,8 +4,15 @@ module Admin
     before_action :check_order, only: :destroy
 
     def index
-      @products = Product.order_by.page(params[:page]).
-        per Settings.product.paginate.per_page
+      @search = Product.search params[:q]
+      @products =
+        if params[:q]
+          @search.result(distinct: true).order_created_at_desc.page(params[:page]).
+          per Settings.suggests.paginate.per_page
+        else
+          Product.order_created_at_desc.page(params[:page]).
+            per Settings.product.paginate.per_page
+        end
     end
 
     def new

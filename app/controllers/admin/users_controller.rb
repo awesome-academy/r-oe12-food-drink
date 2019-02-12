@@ -1,13 +1,14 @@
 module Admin
   class UsersController < AdminBaseController
-    before_action :load_user, only: :destroy
+    before_action :load_user, :admin_user, only: :destroy
     def index
+      @search = User.search params[:q]
       @users =
-        if params[:search]
-          User.search(params[:search]).order_by.page(params[:page]).
+        if params[:q]
+          @search.result(distinct: true).order_created_at_desc.page(params[:page]).
           per Settings.suggests.paginate.per_page
         else
-          User.order_by.page(params[:page]).
+          User.order_created_at_desc.page(params[:page]).
           per Settings.suggests.paginate.per_page
         end
     end

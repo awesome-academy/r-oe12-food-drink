@@ -10,6 +10,18 @@
       <div class="panel panel-default">
         <div class="panel-heading">
           <%= t ".list_order" %>
+          <div class="labelsearch">
+            <div id="search">
+              <%= search_form_for @search, url: admin_orders_path, method: :get do |f| %>
+                <div class="input-group search-order">
+                  <%= f.select :status_cont, options_for_select(select_status), {} , class: "form-control select" %>
+                  <%= f.button type: "submit", class: "btn-search sbutton zbutton", name: nil do %>
+                    <%= content_tag :i, "", class: "fa fa-search" %>
+                  <% end %>
+                </div>
+              <% end %>
+            </div>
+          </div>
         </div>
         <div class="panel-body">
           <div class="wishlist-item table-responsive">
@@ -32,6 +44,7 @@
         </div>
       </div>
       <%= paginate @orders %>
+      <%= link_to t(".back"), :back %>
     </div>
   </div>
 </div>

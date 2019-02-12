@@ -4,12 +4,13 @@ module Admin
     before_action :check_status, only: :destroy
 
     def index
+      @search = Suggest.search params[:q]
       @suggests =
-        if params[:search]
-          Suggest.search(params[:search]).order_by.page(params[:page]).
+        if params[:q]
+          @search.result(distinct: true).order_created_at_desc.page(params[:page]).
           per Settings.suggests.paginate.per_page
         else
-          Suggest.order_by.page(params[:page]).
+          Suggest.order_created_at_desc.page(params[:page]).
           per Settings.suggests.paginate.per_page
         end
     end

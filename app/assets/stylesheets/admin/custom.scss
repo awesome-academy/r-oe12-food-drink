@@ -3,6 +3,7 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 @import 'color';
+
 #error_explanation {
   color: $red;
   ul {
@@ -24,19 +25,72 @@
 
 .labelsearch{
   margin-top: -4px;
-  width: 23%;
+  width: 25%;
   float: right;
 }
+
+.product{
+  width: 34% !important;
+}
+
 .sinput{
   width: 85% !important;
   height: 100%;
 }
+
 .sbutton{
   width: 15%;
   line-height: 28px;
   float: right;
   display: inline-block;
   border: none;
-  color: #39342e;
-  border-color: #ddd;
+  color: $black;
+  border-color: $white;
+}
+
+.search-order
+{
+  width: 180px;
+}
+
+.form-control-product
+{
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: $black2;
+  background-color: $white;
+  background-image: none;
+  border: 1px solid $gray;
+  border-radius: 4px;
+}
+
+.form-control-select
+{
+  width: 88px;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: $black2;
+  background-color: $white;
+  background-image: none;
+  border: 1px solid $gray;
+  border-radius: 4px;
+}
+
+.pbutton{
+  width: 50px !important;
+  line-height: 32px !important;
+}
+
+.select
+{
+  width: 140px !important;
+  height: 30px !important;
+}
+
+.zbutton{
+  width: 40px !important;
 }

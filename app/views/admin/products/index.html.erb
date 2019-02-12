@@ -17,6 +17,18 @@
       <div class="panel panel-default">
         <div class="panel-heading">
           <%= t ".list_product" %>
+          <div class="labelsearch product">
+              <%= search_form_for @search, url: admin_products_path, method: :get do |f| %>
+                <div class="input-group">
+                  <%= f.search_field :name_cont, class: "form-control-product", placeholder: t(".name") %>
+                  <%= f.select :category_id_start, options_for_select(select_category),
+                    {}, class: "form-control-select" %>
+                  <%= f.button type: "submit", class: "btn-search sbutton pbutton", name: nil do %>
+                    <%= content_tag :i, "", class: "fa fa-search" %>
+                  <% end %>
+                </div>
+              <% end %>
+          </div>
         </div>
         <div class="panel-body">
           <div class="wishlist-item table-responsive">
@@ -24,7 +36,7 @@
               <thead>
                 <tr>
                   <th><%= t ".index" %></th>
-                  <th class="th-product"><%= t ".pricure" %></th>
+                  <th class="th-product"><%= t ".picture" %></th>
                   <th><%= t ".name" %></th>
                   <th><%= t ".quantity" %></th>
                   <th><%= t ".price" %></th>
@@ -41,5 +53,6 @@
       </div>
       <%= paginate @products, theme: "twitter-bootstrap-3" %>
     </div>
+    <%= link_to t(".back"), :back %>
   </div>
 </div>
