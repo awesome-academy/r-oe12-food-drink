@@ -27,6 +27,17 @@
               <tbody id="list-order-detail">
                 <%= render partial: "order_detail" %>
               </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="4" rowspan="2"></td>
+                  <td colspan="1"><strong><%= t ".total" %></strong></td>
+                  <td colspan="2">
+                    <strong id="cart-total-price">
+                      <%= t ".total_price", price: total_price(@order_details) %>
+                    </strong>
+                  </td>
+                </tr>
+              </tfoot>
             </table>
           </div>
         </div>
