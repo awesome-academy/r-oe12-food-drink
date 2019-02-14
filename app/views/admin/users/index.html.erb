@@ -12,11 +12,10 @@
           <%= t ".list_user" %>
           <div class="labelsearch">
             <div id="search">
-              <%= form_tag admin_users_path, method: :get do %>
+              <%= search_form_for @search, url: admin_users_path, method: :get do |f| %>
                 <div class="input-group">
-                  <%= text_field_tag :search, params[:search], class: "form-control sinput",
-                    placeholder: t(".name_email") %>
-                  <%= button_tag type: "submit", class: "btn-search sbutton", name: nil do %>
+                  <%= f.search_field :username_or_email_cont, class: "form-control sinput", placeholder: t(".name_email") %>
+                  <%= f.button type: "submit", class: "btn-search sbutton", name: nil do %>
                     <%= content_tag :i, "", class: "fa fa-search" %>
                   <% end %>
                 </div>
@@ -45,6 +44,7 @@
         </div>
       </div>
       <%= paginate @users %>
+      <%= link_to t(".back"), :back %>
     </div>
   </div>
 </div>

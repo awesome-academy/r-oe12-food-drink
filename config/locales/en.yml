@@ -158,7 +158,7 @@ en:
       not_found: "Not found category"
       can_not_delete: "Can not delete category, because the product exists"
       index:
-        index: "Index"
+        index: "No."
         name: "Name"
         quantity: "Quantity"
         function: "Function"
@@ -187,7 +187,7 @@ en:
       product:
         you_sure: "Are you sure?"
       index:
-        id: "id"
+        index: "No."
         picture: "Picture"
         name: "Name"
         quantity: "Quantity"
@@ -221,7 +221,7 @@ en:
       can_not_delete: "Can not delete suggest"
       not_found_category: "Not found suggest"
       index:
-        index: "Index"
+        index: "No."
         username: "Customer name"
         name: "Name"
         describe: "Describe"
@@ -230,7 +230,7 @@ en:
         function: "Function"
         manage_suggests: "Manage suggests"
         list_suggest: "List suggest"
-        status_search: "0:pending, 1:accept, 2:refuse"
+        status_search: "status"
       destroy:
         delete_success: "Delete success"
         delete_failed: "Delete failed"
@@ -252,18 +252,19 @@ en:
       index:
         manage_orders: "Manage orders"
         list_order: "List order"
-        index: "Index"
+        index: "No."
         user_email: "Customer email"
         user_name: "Customer"
         total: "Total"
         status: "Status"
         function: "Function"
+        search: "status"
     users:
       not_found_user: "Not found user"
       index:
         manage_users: "Manage users"
         list_user: "List user"
-        index: "Index"
+        index: "No."
         name: "Name"
         gender: "Gender"
         address: "Address"
@@ -275,3 +276,5 @@ en:
       destroy:
         delete_success: "Delete success"
         delete_failed: "Delete failed"
+      user:
+        you_sure: "You sure"

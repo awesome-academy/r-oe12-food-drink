@@ -6,4 +6,6 @@ class Order < ApplicationRecord
   enum status: {pending: 0, accept: 1, refuse: 2}
   delegate :email, to: :user, prefix: "user", allow_nil: true
   delegate :username, to: :user, prefix: "user", allow_nil: true
+
+  scope :order_created_at_desc, -> {order created_at: :desc}
 end

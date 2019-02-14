@@ -7,8 +7,7 @@ class User < ApplicationRecord
   has_many :orders, dependent: :destroy
   has_many :ratings, dependent: :destroy
 
-  scope :search, ->(key){where("email LIKE ? OR username LIKE ?", "%#{key}%", "%#{key}%")}
-  scope :order_by, -> {order created_at: :desc}
+  scope :order_created_at_desc, -> {order created_at: :desc}
 
   def current_user? user
     user == self

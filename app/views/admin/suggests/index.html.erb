@@ -12,11 +12,11 @@
           <%= t ".list_suggest" %>
           <div class="labelsearch">
             <div id="search">
-              <%= form_tag admin_suggests_path, method: :get do %>
-                <div class="input-group">
-                  <%= text_field_tag :search, params[:search], class: "form-control sinput",
-                    placeholder: t(".status_search") %>
-                  <%= button_tag type: "submit", class: "btn-search sbutton", name: nil do %>
+              <%= search_form_for @search, url: admin_suggests_path, method: :get do |f| %>
+                <div class="input-group search-order">
+                  <%= f.select :status_cont, options_for_select(select_status),
+                    {}, class: "form-control sinput select", placeholder: t(".status_search") %>
+                  <%= f.button type: "submit", class: "btn-search sbutton zbutton", name: nil do %>
                     <%= content_tag :i, "", class: "fa fa-search" %>
                   <% end %>
                 </div>
@@ -46,5 +46,6 @@
       </div>
       <%= paginate @suggests %>
     </div>
+    <%= link_to t(".back"), :back %>
   </div>
 </div>

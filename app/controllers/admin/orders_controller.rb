@@ -3,8 +3,15 @@ module Admin
     before_action :find_order, only: :update
 
     def index
-      @orders = Order.page(params[:page]).
-        per Settings.paginate.per_page
+      @search = Order.search params[:q]
+      @orders =
+        if params[:q]
+          @search.result(distinct: true).order_created_at_desc.page(params[:page]).
+            per Settings.suggests.paginate.per_page
+        else
+          Order.order_created_at_desc.page(params[:page]).
+            per Settings.paginate.per_page
+        end
     end
 
     def update
