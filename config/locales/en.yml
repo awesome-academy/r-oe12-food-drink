@@ -79,7 +79,6 @@ en:
       ordered_date_label: "Ordered date"
       status: "Status"
       function: "Function"
-
   order_details:
     order_detail:
       price: "$ %{price}"
@@ -97,6 +96,7 @@ en:
       unit_price: "Unit price"
       quantity: "Quanity"
       total: "Total"
+      total_price: "$ %{price}"
   carts:
     shopping_title: "Shopping cart"
     shopping_cart:
@@ -107,6 +107,7 @@ en:
       quantity: "Quantity"
       total_label: "Total"
       function: "Function"
+      total: "$ %{price}"
     order_cart:
       apply: "Apply"
       you_sure: "You sure?"
@@ -267,6 +268,7 @@ en:
         unit_price: "Unit price"
         quantity: "Quanity"
         total: "Total"
+        total_price: "$ %{price}"
     orders:
       index:
         manage_orders: "Manage orders"
