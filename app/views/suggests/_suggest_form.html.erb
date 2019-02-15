@@ -1,0 +1,24 @@
+<%= form_for @suggest do |f| %>
+  <div class="contact-form-box">
+    <%= render "shared/error_messages", object: f.object %>
+    <div class="form-selector">
+      <%= f.label :name %><span class="red">*</span>
+      <%= f.text_field :name, class: "form-control input-sm" %>
+    </div>
+    <div class="form-selector">
+      <%= f.label :describe %><span class="red">*</span>
+      <%= f.text_field :describe, class: "form-control input-sm" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :picture %>
+      <%= f.file_field :picture, accept: "image/jpeg,image/gif,image/png", class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :price %><span class="red">*</span>
+      <%= f.number_field :price, class: "form-control input-sm" %>
+    </div>
+    <div class="form-selector">
+      <%= f.submit yield(:button_text), class: "button" %>
+    </div>
+  </div>
+<% end %>

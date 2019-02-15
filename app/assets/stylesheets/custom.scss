@@ -7,3 +7,17 @@
 .red{
   color: $red;
 }
+
+.wishlist-item table .th-product {
+  width: 18%;
+}
+.wishlist-item table .th-product img {
+  width: 100px;
+}
+
+.alert {
+  position: fixed;
+  top: 10%;
+  right: 10%;
+  margin-bottom: unset;
+}

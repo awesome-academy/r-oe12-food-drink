@@ -22,6 +22,12 @@
                       <span class="hidden-xs" ><%= t ".history_order" %></span>
                     <% end %>
                   </div>
+                  <div class="login">
+                    <%= link_to suggests_path do %>
+                      <i class="fa fa-history"></i>
+                      <span class="hidden-xs" ><%= t ".history_suggests" %></span>
+                    <% end %>
+                  </div>
                   <% if current_user.is_admin? %>
                     <div class="login">
                       <%= link_to admin_root_path do %>

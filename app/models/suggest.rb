@@ -10,5 +10,6 @@ class Suggest < ApplicationRecord
 
   scope :order_created_at_desc, -> {order created_at: :desc}
 
+  mount_uploader :picture, PictureUploader
   delegate :username, to: :user, prefix: :user
 end

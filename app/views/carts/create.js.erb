@@ -1,0 +1,9 @@
+if('<%= flash.blank? %>' != 'true') {
+  $('.alert').addClass('alert-success').text('<%= flash[:success] %>').show();
+  $('span.cart-total').text("<%= t "layouts.header.items", item: current_order.size %>")
+  $(document).ready(function() {
+    setTimeout(function() {
+      $(".alert").fadeOut(2000);
+    }, 3000);
+  });
+}

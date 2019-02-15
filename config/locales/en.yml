@@ -115,6 +115,16 @@ en:
     destroy:
       success_delete: "Deleted sucess"
   suggests:
+    index:
+      my_suggests: "My suggests"
+      history_suggests: "History suggests"
+      index: "No."
+      picture: "Picture"
+      name: "Name"
+      describe: "Describe"
+      price: "price"
+      status: "status"
+      function: "function"
     new:
       suggest: "Suggests"
       suggest_us: "Suggests for Us"
@@ -123,6 +133,14 @@ en:
     create:
       suggest_success: "Suggested success"
       suggest_fail: "Suggested fail"
+    destroy:
+      delete_success: "Deleted sucess"
+    edit:
+      update_suggest: "Update Suggest"
+      update: "Update"
+    update:
+      success: "Update Success"
+      failed: "Update Fail"
   filters:
     search_title: "Search"
     show:
@@ -223,6 +241,7 @@ en:
       index:
         index: "No."
         username: "Customer name"
+        picture: "Picture"
         name: "Name"
         describe: "Describe"
         status: "Status"

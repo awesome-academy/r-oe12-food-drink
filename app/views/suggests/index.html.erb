@@ -1,0 +1,32 @@
+<% provide :title, t(".my_suggests") %>
+<section class="main-container col2-right-layout">
+  <div class="main container">
+    <div class="row">
+      <div class="col-main col-sm-12 col-xs-12">
+        <div class="my-account">
+          <div class="page-title">
+            <h2><%= t ".history_suggests" %></h2>
+          </div>
+          <div class="wishlist-item table-responsive">
+            <table class="col-md-12">
+              <thead>
+                <tr>
+                  <th><%= t ".index" %></th>
+                  <th><%= t ".picture" %></th>
+                  <th><%= t ".name" %></th>
+                  <th><%= t ".describe" %></th>
+                  <th><%= t ".price" %></th>
+                  <th><%= t ".status" %></th>
+                  <th><%= t ".function" %></th>
+                </tr>
+              </thead>
+              <tbody id="list-suggest">
+                <%= render partial: "suggest" %>
+              </tbody>
+            </table>
+            <%= paginate @suggests, theme: "twitter-bootstrap-3" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

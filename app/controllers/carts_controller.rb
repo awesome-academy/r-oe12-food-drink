@@ -13,14 +13,19 @@ class CartsController < ApplicationController
     order_detail = OrderDetail.new item_params
     result = find_product_in_cart(order_detail.product_id)
     if order_detail.quantity.nil? || order_detail.quantity <= 0
-      flash[:danger] = t ".failed_add"
+      flash.now[:danger] = t ".failed_add"
+      respond_to do |format|
+        format.js
+      end
     elsif result
       check_quantity result, order_detail.quantity
     else
       session[:shopping_cart] << order_detail
-      flash[:success] = t ".success_add"
+      flash.now[:success] = t ".success_add"
+      respond_to do |format|
+        format.js
+      end
     end
-    redirect_to cart_path
   end
 
   def update
