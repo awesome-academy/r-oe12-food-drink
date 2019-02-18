@@ -28,6 +28,8 @@ gem "rails-i18n"
 gem "rails-ujs", "~> 0.1.0"
 gem "ransack"
 gem "turbolinks", "~> 5"
+gem "omniauth-google-oauth2"
+gem "figaro"
 
 group :production do
   gem "pg", "~> 0.20.0"

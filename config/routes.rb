@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
   resource :cart
   get "/search", to: "filters#show"
-  devise_for :users
+  devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
   resources :users, :only => [:show]
   as :user do
     get "signin" => "devise/sessions#new"
