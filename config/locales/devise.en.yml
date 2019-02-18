@@ -60,6 +60,7 @@ en:
         signin_account: "Signin Account"
         remember: "Remember"
         submit: "Log in"
+        signin_with_google: "Log in with Google"
     shared:
       links:
         log_in: "Log in"
